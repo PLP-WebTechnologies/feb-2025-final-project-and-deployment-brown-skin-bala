@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our delicious range of freshly baked goods - Brown Skin Bala's Bakery">
+    <title>Our Products | Brown Skin Bala's Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-bread-slice"></i>
+                <span>Brown Skin Bala's Bakery</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="custom-orders.html">Custom Orders</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Products Hero -->
+    <section class="products-hero">
+        <div class="products-hero-content">
+            <span class="hero-subtitle">Freshly Baked</span>
+            <h1>Our Menu</h1>
+            <p class="hero-description">Discover our delicious range of artisanal baked goods</p>
+            <div class="hero-features">
+                <div class="feature-item">
+                    <i class="fas fa-bread-slice"></i>
+                    <span>Artisan Breads</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Custom Cakes</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-cookie"></i>
+                    <span>Fresh Pastries</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-mug-hot"></i>
+                    <span>Hot Beverages</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#breads" class="btn btn-primary">View Menu</a>
+                <a href="custom-orders.html" class="btn btn-secondary">Custom Orders</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Category Navigation -->
+    <nav class="category-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#breads">Breads</a></li>
+                <li><a href="#pastries">Pastries</a></li>
+                <li><a href="#cakes">Cakes</a></li>
+                <li><a href="#cookies">Cookies</a></li>
+                <li><a href="#seasonal">Seasonal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breads Section -->
+    <section id="breads" class="product-section">
+        <div class="container">
+            <h2>Artisan Breads</h2>
+            <p class="section-description">Our breads are made fresh daily using traditional methods and the finest ingredients</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Sourdough Bread.jpg" alt="Sourdough Bread">
+                        <div class="product-overlay">
+                            <button class="add-to-cart" data-product="Sourdough" data-price="KSh 100">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sourdough Bread</h3>
+                        <p>Traditional sourdough with a perfect crust and chewy interior</p>
+                        <p class="price">KSh 100</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/French Baguette.jpg" alt="French Baguette">
+                        <div class="product-overlay">
+                            <button class="add-to-cart" data-product="Baguette" data-price="KSh 150">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>French Baguette</h3>
+                        <p>Crispy crust with a light and airy interior</p>
+                        <p class="price">KSh 150</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Whole Wheat Bread.jpg" alt="Whole Wheat Bread">
+                        <div class="product-overlay">
+                            <button class="add-to-cart" data-product="Whole Wheat" data-price="KSh 200">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Whole Wheat Bread</h3>
+                        <p>Nutritious whole grain bread perfect for sandwiches</p>
+                        <p class="price">KSh 200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pastries Section -->
+    <section id="pastries" class="product-section">
+        <div class="container">
+            <h2>Fresh Pastries</h2>
+            <p class="section-description">Delicate, flaky, and absolutely delicious</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Butter Croissant.jpg" alt="Butter Croissant">
+                        <div class="product-overlay">
+                            <button class="add-to-cart" data-product="Croissant" data-price="KSh 120">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Butter Croissant</h3>
+                        <p>Light and flaky with a rich buttery taste</p>
+                        <p class="price">KSh 120 each</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Danish Pastry.jpg" alt="Danish Pastry">
+                        <div class="product-overlay">
+                            <button class="add-to-cart" data-product="Danish" data-price="KSh 200">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Danish Pastry</h3>
+                        <p>Filled with sweet cream cheese and fresh fruits</p>
+                        <p class="price">KSh 200</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Chocolate Éclair.jpg" alt="Chocolate Éclair">
+                        <div class="product-overlay">
+                            <button class="add-to-cart" data-product="Éclair" data-price="KSh 150">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Chocolate Éclair</h3>
+                        <p>Filled with vanilla cream and topped with chocolate</p>
+                        <p class="price">KSh 150</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cakes Section -->
+    <section id="cakes" class="product-section">
+        <div class="container">
+            <h2>Celebration Cakes</h2>
+            <p class="section-description">Perfect for any special occasion</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Chocolate Dream Cake.jpg" alt="Chocolate Cake">
+                        <div class="product-overlay">
+                            <button class="add-to-cart" data-product="Chocolate Cake" data-price="KSh 2,000">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Chocolate Dream Cake</h3>
+                        <p>Rich chocolate layers with ganache filling</p>
+                        <p class="price">KSh 2,000</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Red Velvet Cake.jpg" alt="Red Velvet Cake">
+                        <div class="product-overlay">
+                            <button class="add-to-cart" data-product="Red Velvet" data-price="KSh 3,000">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Red Velvet Cake</h3>
+                        <p>Classic red velvet with cream cheese frosting</p>
+                        <p class="price">KSh 3,000</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Fresh Fruit Cake.jpg" alt="Fresh Fruit Cake">
+                        <div class="product-overlay">
+                            <button class="add-to-cart" data-product="Fruit Cake" data-price="KSh 2,500">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Fruit Cake</h3>
+                        <p>Light sponge with fresh seasonal fruits</p>
+                        <p class="price">KSh 2,500</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookies Section -->
+    <section id="cookies" class="product-section">
+        <div class="container">
+            <h2>Homemade Cookies</h2>
+            <p class="section-description">Baked fresh throughout the day</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Chocolate Chip.jpg" alt="Chocolate Chip Cookies">
+                        <div class="product-overlay">
+                            <button class="add-to-cart" data-product="Chocolate Chip Cookies" data-price="KSh 250">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Chocolate Chip</h3>
+                        <p>Classic cookies with premium chocolate chips</p>
+                        <p class="price">KSh 250 each</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Oatmeal Raisin.jpg" alt="Oatmeal Raisin Cookies">
+                        <div class="product-overlay">
+                            <button class="add-to-cart" data-product="Oatmeal Raisin" data-price="KSh 200">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Oatmeal Raisin</h3>
+                        <p>Hearty oatmeal cookies with plump raisins</p>
+                        <p class="price">KSh 200 each</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Sugar Cookies.jpg" alt="Sugar Cookies">
+                        <div class="product-overlay">
+                            <button class="add-to-cart" data-product="Sugar Cookies" data-price="KSh 100">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sugar Cookies</h3>
+                        <p>Buttery cookies with a sweet glaze</p>
+                        <p class="price">KSh 100 each</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Section -->
+    <section id="seasonal" class="product-section">
+        <div class="container">
+            <h2>Seasonal Specials</h2>
+            <p class="section-description">Limited time offerings that change with the seasons</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Pumpkin Spice Bread.jpg" alt="Pumpkin Spice Bread">
+                        <div class="product-overlay">
+                            <button class="add-to-cart" data-product="Pumpkin Spice Bread" data-price="KSh 200">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pumpkin Spice Bread</h3>
+                        <p>Fall favorite with warm autumn spices</p>
+                        <p class="price">KSh 200</p>
+                    </div>
+                </div>
+                <!-- Add more seasonal items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <address>
+                    Brown Skin Bala's Bakery<br>
+                    Nairobi, Kenya<br>
+                    Embakasi<br>
+                    Phone: +254 112883671<br>
+                    Email: brownskinbala@gmail.com<br>
+                    <br>
+                    <strong>Opening Hours:</strong><br>
+                    Mon-Fri: 8am-8pm<br>
+                    Sat-Sun: 9am-8pm
+                </address>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="custom-orders.html">Custom Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Brown Skin Bala's Bakery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

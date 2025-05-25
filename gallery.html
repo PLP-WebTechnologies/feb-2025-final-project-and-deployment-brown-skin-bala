@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gallery of our delicious baked goods and special events - Brown Skin Bala's Bakery">
+    <title>Gallery | Brown Skin Bala's Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-bread-slice"></i>
+                <span>Brown Skin Bala's Bakery</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="custom-orders.html">Custom Orders</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
+        <div class="gallery-hero-content">
+            <h1>Our Gallery</h1>
+            <p>A visual feast of our finest creations</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="breads">Breads</button>
+                <button class="filter-btn" data-filter="pastries">Pastries</button>
+                <button class="filter-btn" data-filter="cakes">Cakes</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid">
+        <div class="container">
+            <div class="masonry-grid">
+                <!-- Breads -->
+                <div class="gallery-item" data-category="breads">
+                    <a href="images/gallery/bread-1.jpg" data-lightbox="gallery" data-title="Artisan Sourdough">
+                        <img src="images/Sourdough Bread.jpg" alt="Artisan Sourdough">
+                        <div class="gallery-overlay">
+                            <h3>Artisan Sourdough</h3>
+                            <p>Our signature sourdough bread</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-item" data-category="breads">
+                    <a href="images/gallery/bread-2.jpg" data-lightbox="gallery" data-title="Fresh Baguettes">
+                        <img src="images/Fresh Baguettes.jpg" alt="Fresh Baguettes">
+                        <div class="gallery-overlay">
+                            <h3>Fresh Baguettes</h3>
+                            <p>Baked throughout the day</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Pastries -->
+                <div class="gallery-item" data-category="pastries">
+                    <a href="images/gallery/pastry-1.jpg" data-lightbox="gallery" data-title="Butter Croissants">
+                        <img src="images/Butter Croissant.jpg" alt="Butter Croissants">
+                        <div class="gallery-overlay">
+                            <h3>Butter Croissants</h3>
+                            <p>Flaky and delicious</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-item" data-category="pastries">
+                    <a href="images/gallery/pastry-2.jpg" data-lightbox="gallery" data-title="Danish Pastries">
+                        <img src="images/Danish Pastry.jpg" alt="Danish Pastries">
+                        <div class="gallery-overlay">
+                            <h3>Danish Pastries</h3>
+                            <p>With fresh fruit filling</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cakes -->
+                <div class="gallery-item large" data-category="cakes">
+                    <a href="images/gallery/cake-1.jpg" data-lightbox="gallery" data-title="Wedding Cake">
+                        <img src="images/wedding cake.jpg" alt="Wedding Cake">
+                        <div class="gallery-overlay">
+                            <h3>Wedding Cake</h3>
+                            <p>Three-tier elegance</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-item" data-category="cakes">
+                    <a href="images/gallery/cake-2.jpg" data-lightbox="gallery" data-title="Birthday Cake">
+                        <img src="images/birthday cake.jpg" alt="Birthday Cake">
+                        <div class="gallery-overlay">
+                            <h3>Birthday Cake</h3>
+                            <p>Custom designed</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Events -->
+                <div class="gallery-item wide" data-category="events">
+                    <a href="images/gallery/event-1.jpg" data-lightbox="gallery" data-title="Baking Workshop">
+                        <img src="images/baking workshop.jpg" alt="Baking Workshop">
+                        <div class="gallery-overlay">
+                            <h3>Baking Workshop</h3>
+                            <p>Learning and fun</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <a href="images/gallery/event-2.jpg" data-lightbox="gallery" data-title="Corporate Event">
+                        <img src="images/corporate event.jpg" alt="Corporate Event">
+                        <div class="gallery-overlay">
+                            <h3>Corporate Event</h3>
+                            <p>Catering excellence</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="instagram-feed">
+        <div class="container">
+            <h2>Follow Us on Instagram</h2>
+            <p>@brown_skin_bala</p>
+            <div class="instagram-grid">
+                <!-- Instagram feed will be dynamically loaded here -->
+            </div>
+            <a href="https://instagram.com" class="btn btn-secondary" target="_blank">Follow Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <address>
+                    Brown Skin Bala's Bakery<br>
+                    Nairobi, Kenya<br>
+                    Embakasi<br>
+                    Phone: +254 112883671<br>
+                    Email: brownskinbala@gmail.com<br>
+                    <br>
+                    <strong>Opening Hours:</strong><br>
+                    Mon-Fri: 8am-8pm<br>
+                    Sat-Sun: 9am-8pm
+                </address>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="custom-orders.html">Custom Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Brown Skin Bala's Bakery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

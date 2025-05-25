@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Order fresh baked goods online - Brown Skin Bala's Bakery">
+    <title>Online Shop | Brown Skin Bala's Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-bread-slice"></i>
+                <span>Brown Skin Bala's Bakery</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="custom-orders.html">Custom Orders</a></li>
+                <li><a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-summary">
+            <div class="subtotal">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">KSh 0.00</span>
+            </div>
+            <div class="delivery-fee">
+                <span>Delivery Fee:</span>
+                <span id="delivery-fee">KSh 650</span>
+            </div>
+            <div class="total">
+                <span>Total:</span>
+                <span id="cart-total">KSh 0.00</span>
+            </div>
+        </div>
+        <div class="cart-actions">
+            <button class="btn btn-primary" id="checkout-btn">Proceed to Checkout</button>
+            <button class="btn btn-secondary" id="clear-cart">Clear Cart</button>
+        </div>
+    </div>
+
+    <!-- Shop Hero -->
+    <section class="shop-hero">
+        <div class="shop-hero-content">
+            <span class="hero-subtitle">Online Store</span>
+            <h1>Fresh Baked Goodness</h1>
+            <p class="hero-description">Delivered straight to your doorstep</p>
+            <div class="hero-benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-truck-fast"></i>
+                    <div class="benefit-text">
+                        <h3>Fast Delivery</h3>
+                        <p>Same day delivery in Nairobi</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-clock"></i>
+                    <div class="benefit-text">
+                        <h3>Fresh Daily</h3>
+                        <p>Baked fresh every morning</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-credit-card"></i>
+                    <div class="benefit-text">
+                        <h3>Secure Payment</h3>
+                        <p>Safe & easy transactions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#shop-products" class="btn btn-primary">Start Shopping</a>
+                <div class="payment-options">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>M-Pesa Accepted</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Delivery Options -->
+    <section class="delivery-options">
+        <div class="container">
+            <h2>Choose Your Delivery Option</h2>
+            <div class="options-grid">
+                <div class="option-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Home Delivery</h3>
+                    <p>Same-day delivery within Nairobi</p>
+                    <p class="delivery-time">2-4 hours</p>
+                    <p class="delivery-fee">KSh 150</p>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-store"></i>
+                    <h3>Store Pickup</h3>
+                    <p>Pick up from our Embakasi location</p>
+                    <p class="delivery-time">Ready in 1 hour</p>
+                    <p class="delivery-fee">Free</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="shop-products">
+        <div class="container">
+            <h2>Available Today</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="breads">Breads</button>
+                <button class="filter-btn" data-category="pastries">Pastries</button>
+                <button class="filter-btn" data-category="cakes">Cakes</button>
+                <button class="filter-btn" data-category="cookies">Cookies</button>
+            </div>
+            <div class="product-grid" id="shop-products">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Delivery Option</label>
+                    <div class="radio-group">
+                        <input type="radio" id="delivery" name="delivery-option" value="delivery" checked>
+                        <label for="delivery">Home Delivery (KSh 650)</label>
+                        <input type="radio" id="pickup" name="delivery-option" value="pickup">
+                        <label for="pickup">Store Pickup (Free)</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <div class="payment-methods">
+                        <div class="payment-option">
+                            <input type="radio" id="mpesa" name="payment-method" value="mpesa">
+                            <label for="mpesa">M-Pesa</label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="card" name="payment-method" value="card" checked>
+                            <label for="card">Credit/Debit Card</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="card-element">
+                    <!-- Stripe Card Element will be inserted here -->
+                </div>
+                <div id="card-errors" role="alert"></div>
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkout-items"></div>
+                    <div class="checkout-total">
+                        <span>Total:</span>
+                        <span id="checkout-total">KSh 0.00</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <address>
+                    Brown Skin Bala's Bakery<br>
+                    Nairobi, Kenya<br>
+                    Embakasi<br>
+                    Phone: +254 112883671<br>
+                    Email: brownskinbala@gmail.com<br>
+                    <br>
+                    <strong>Opening Hours:</strong><br>
+                    Mon-Fri: 8am-8pm<br>
+                    Sat-Sun: 9am-8pm
+                </address>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="custom-orders.html">Custom Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Brown Skin Bala's Bakery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
