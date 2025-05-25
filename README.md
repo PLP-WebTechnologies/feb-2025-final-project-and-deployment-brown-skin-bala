@@ -1,5 +1,7 @@
 # Brown Skin Bala's Bakery Website
 
+LIVE DEMO LINK: https://plp-webtechnologies.github.io/feb-2025-final-project-and-deployment-brown-skin-bala/
+
 A modern, responsive website for Brown Skin Bala's Bakery, showcasing their artisanal baked goods and providing an easy-to-use e-commerce platform for customers.
 
 ## 🌟 Features
